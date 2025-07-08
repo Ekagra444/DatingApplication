@@ -1,12 +1,31 @@
 
-
+const AboutData = [
+    ["Age", "27 to 33"],
+    ["Height", "5'2'' (157 cm) to 5'10'' (178 cm)"],
+    ["Marital Status", " Never Married"],
+    ["Mother Toungue", "English, Hindi"],
+    ["Country", "India"],
+    ["State", "UP, Delhi"],
+    ["Diet", "Vegan, Vegetarian"],
+    ["Goals", "Casual"],
+    ["Religion/Community", "Brahmin, Sharma"],
+    ["Interests", "Music, Cinema, Coding"]
+];
 export default function BestMatchCard() {
   return (
-    <div className="w-full mx-auto  rounded-xl border border-slate-500/60 mt-6 p-6">
-        <h2 className="text-2xl font-bold text-blue-700">Who would I hump ...</h2> 
+    <div className="bg-black/90 shadow-md shadow-black border border-slate-200 rounded-2xl z-20 my-6 gap-6 p-5 mx-auto">
+        <h2 className="text-2xl font-bold text-blue-500">Who would I hump ...</h2> 
         <div className="text-sm mt-3">
-            <div className="flex items-center gap-3">
-            <div className="text-red-500 font-semibold">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-20 text-sm">
+                {AboutData.map(([label, value], index) => (
+                <div key={index} className="flex flex-col">
+                    <span className="text-pink-500/80 font-semibold">{label}</span>
+                    <span className="text-white/90">{value}</span>
+                </div>
+                ))}
+            </div>
+            {/* <div className="flex items-center gap-3">
+            <div className="text-pink-500 font-semibold">
                 Age : 
             </div>
             <div >
@@ -14,7 +33,7 @@ export default function BestMatchCard() {
             </div>
             </div>
             <div className="flex items-center gap-3">
-            <div className="text-red-500 font-semibold">
+            <div className="text-pink-500 font-semibold">
                 Height : 
             </div>
             <div >
@@ -22,7 +41,7 @@ export default function BestMatchCard() {
             </div>
             </div>
             <div className="flex items-center gap-3">
-            <div className="text-red-500 font-semibold">
+            <div className="text-pink-500 font-semibold">
                 Marital Status : 
             </div>
             <div >
@@ -30,7 +49,7 @@ export default function BestMatchCard() {
             </div>
             </div>
             <div className="flex items-center gap-3">
-            <div className="text-red-500 font-semibold">
+            <div className="text-pink-500 font-semibold">
                 Mother Toungue : 
             </div>
             <div >
@@ -38,7 +57,7 @@ export default function BestMatchCard() {
             </div>
             </div>
             <div className="flex items-center gap-3">
-            <div className="text-red-500 font-semibold">
+            <div className="text-pink-500 font-semibold">
                 Country Living in : 
             </div>
             <div >
@@ -46,7 +65,7 @@ export default function BestMatchCard() {
             </div>
             </div>
             <div className="flex items-center gap-3">
-            <div className="text-red-500 font-semibold">
+            <div className="text-pink-500 font-semibold">
                 State Living in : 
             </div>
             <div >
@@ -54,7 +73,7 @@ export default function BestMatchCard() {
             </div>
             </div>
             <div className="flex items-center gap-3">
-            <div className="text-red-500 font-semibold">
+            <div className="text-pink-500 font-semibold">
                 Diet : 
             </div>
             <div >
@@ -62,7 +81,7 @@ export default function BestMatchCard() {
             </div>
             </div>
             <div className="flex items-center gap-3">
-            <div className="text-red-500 font-semibold">
+            <div className="text-pink-500 font-semibold">
                 Goals : 
             </div>
             <div >
@@ -70,7 +89,7 @@ export default function BestMatchCard() {
             </div>
             </div>
             <div className="">
-            <div className="text-red-500 font-semibold">
+            <div className="text-pink-500 font-semibold">
                 Interests : 
             </div>
             <div className="ml-3">
@@ -80,7 +99,7 @@ export default function BestMatchCard() {
                     <li>Coding</li>
                 </ul>
             </div>
-            </div>
+            </div> */}
 
         </div>     
     </div>

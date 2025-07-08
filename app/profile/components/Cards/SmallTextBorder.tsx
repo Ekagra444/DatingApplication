@@ -5,7 +5,7 @@ interface interProps {
 
 export default function SmallTextBorder(props:interProps) {
   return (
-    <span className="rounded-2xl bg-rose-400 py-0.5 px-4 text-sm font-normal">
+    <span className="rounded-2xl shadow-md shadow-pink-300/70 bg-pink-500/90 text-white/90 py-0.5 px-4 text-sm">
       {props.text}
     </span>
   )

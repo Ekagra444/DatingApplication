@@ -9,14 +9,14 @@ import Sidebar from './components/Sidebar'
 
 export default function page() {
   return (
-    <div>
+    <div className=''>
       <Navbar />
     <div className='flex'>
       <div className='w-[210px] relative'>
       <Sidebar />
       </div>
       <div>
-        <div>
+        <div> 
           <div className='text-3xl font-bold tracking-tight my-10'> 
             Your Profile
           </div> 
