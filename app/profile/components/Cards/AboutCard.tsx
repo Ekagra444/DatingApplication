@@ -1,3 +1,8 @@
+import { Satisfy } from "next/font/google";
+const satisfy = Satisfy({
+  subsets:["latin"],
+  weight:["400"]
+})
 const AboutData = [
   ["Lifestyle", "Vegetarian, Social smoker and drinker"],
   ["Hometown", "Mathura, UP, India"],
@@ -7,16 +12,15 @@ const AboutData = [
   ["Languages", "CPP, Python, JavaScript, English, Hindi"],
   ["Objective", "Looking for casual, just for hookup"],
 ];
-
 export default function AboutCard() {
   return (
-    <div className="bg-white/90 shadow-md shadow-slate-200 border border-slate-200 rounded-2xl z-20 gap-6 p-5 mx-auto mt-6">
-      <h2 className="text-2xl font-bold mb-6 border-b border-gray-600 pb-2">About</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-20 text-sm">
+    <div className={`bg-black/80 shadow-md border-slate-200 rounded-2xl shadow-slate-600/80 z-20 gap-6 p-5 mx-auto border border-slate-600/70 mt-6`}>
+      <h2 className="text-2xl font-bold mb-6 border-b border-gray-600 pb-2 text-white/80">About</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-20 text-sm">
         {AboutData.map(([label, value], index) => (
-          <div key={index} className="flex flex-col">
-            <span className="text-pink-500 font-semibold">{label}</span>
-            <span className="">{value}</span>
+          <div key={index} className="flex transition-all hover:translate-y-1 hover:shadow-slate-600 flex-col  gap-3 z-40 shadow-md p-5 rounded-xl">
+            <span className={`text-pink-500 text-lg tracking-wider ${satisfy.className}`}>{label}</span>
+            <span className="text-white/80">{value}</span>
           </div>
         ))}
       </div>

@@ -5,7 +5,7 @@ interface interProps {
 
 export default function SmallTextBorder(props:interProps) {
   return (
-    <span className="rounded-2xl shadow-md shadow-pink-300/70 bg-pink-500/90 text-white/90 py-0.5 px-4 text-sm">
+    <span className="transition-all rounded-2xl shadow-md hover:shadow-violet-300/50 bg-violet-500 text-white/90 text-sm py-0.5 px-4">
       {props.text}
     </span>
   )

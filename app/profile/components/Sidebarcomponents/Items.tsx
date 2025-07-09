@@ -8,7 +8,7 @@ interface itemsProps {
 
 export default function Items(props:itemsProps) {
   return (
-    <div className="hover:cursor-pointer hover:bg-slate-200/70 py-1 px-4 rounded-lg">
+    <div className="hover:cursor-pointer hover:bg-slate-800/70 py-1 px-4 flex items-center gap-2 rounded-lg">
       <div>
         {props.StartIcon ? props.StartIcon:null}
       </div>
