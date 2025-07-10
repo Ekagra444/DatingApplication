@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(uuid())
+  email      String   @unique
+  profile    Profile?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Profile {
+  id               String    @id @default(uuid())
+  user             User      @relation(fields: [userId], references: [id])
+  userId           String    @unique
+
+  name             String
+  age              Int
+  gender           Gender
+  sexuality        Sexuality
+
+  city             String
+  state            String
+  country          String
+  latitude         Float?
+  longitude        Float?
+
+  bio              String?   @db.VarChar(500)
+  hobbies          String[]  // PostgreSQL array
+  interests        String[]
+  occupation       String?   @db.VarChar(100)
+  education        String?   @db.VarChar(100)
+  height           Int?
+
+  relationshipType RelationshipType?
+  drinking         Drinking?
+  smoking          Smoking?
+  hasChildren      Boolean?
+  wantsChildren    WantsChildren?
+  religion         String?   @db.VarChar(50)
+  languages        String[]
+
+  isVerified       Boolean   @default(false)
+  showAge          Boolean   @default(true)
+  showDistance     Boolean   @default(true)
+
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
+enum Gender {
+  male
+  female
+  non_binary
+  other
+}
+
+enum Sexuality {
+  straight
+  gay
+  lesbian
+  bisexual
+  pansexual
+  asexual
+  other
+}
+
+enum RelationshipType {
+  casual
+  serious
+  friends
+  open
+}
+
+enum Drinking {
+  never
+  rarely
+  socially
+  regularly
+}
+
+enum Smoking {
+  never
+  occasionally
+  regularly
+}
+
+enum WantsChildren {
+  yes
+  no
+  maybe
+  someday
+}
