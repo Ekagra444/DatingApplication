@@ -32,6 +32,6 @@ export async function POST(req: NextRequest) {
       user: { id: user.id, email: user.email }
     });
   } catch (error) {
-    return NextResponse.json({ error: 'Internal server error(backend down) , cant login user' }, { status: 500 });
+    return NextResponse.json({ error: "Internal server error (backend down), can't login user" }, { status: 500 });
   }
 }
