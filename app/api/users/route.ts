@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { profileSchema } from '@/lib/validators/pofile';
-//has to implement below 🛑🛑getUserIdFromRequest, it has not yet been implemented 
 import { getUserIdFromRequest } from '@/lib/auth/getUserIdFromRequest';
 import { getUserById, createUserProfile, updateUserProfile } from '@/lib/services/userService';
 
