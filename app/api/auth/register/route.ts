@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
 
     // Check if user already exists
     const existingUser = await prisma.user.findUnique({
-      where: { email }
+      where: { email:email }
     });
 
     if (existingUser) {
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     const token = generateToken(user.id);
 
     return NextResponse.json({
-      message: 'User created successfully',
+      message: 'User registered successfully',
       token,
       user: { id: user.id, email: user.email }
     });
