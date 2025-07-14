@@ -4,13 +4,6 @@ import FBLogo from "./FBLogo";
 import InstaLogo from "./InstaLogo";
 import SmallTextBorder from "./SmallTextBorder";
 import Xlogo from "./Xlogo";
-// import { Comic_Neue } from "next/font/google";
-
-
-// const rubik = Comic_Neue({
-//   subsets:["latin"],
-//   weight:["300", "400", "700"]
-// })
 
 const interests = ["cricket", "music", "cinema", "coding"];
 

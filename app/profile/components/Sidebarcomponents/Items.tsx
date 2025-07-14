@@ -8,11 +8,11 @@ interface itemsProps {
 
 export default function Items(props:itemsProps) {
   return (
-    <div className="hover:cursor-pointer hover:bg-slate-800/70 py-1 px-4 flex items-center gap-2 rounded-lg">
+    <div className="hover:cursor-pointer items-center hover:bg-slate-800/70 px-2 py-1 flex rounded-lg gap-2">
       <div>
         {props.StartIcon ? props.StartIcon:null}
       </div>
-      <button onClick={props.onclick} className="border-none">
+      <button onClick={props.onclick} className="">
         {props.text}
       </button>
     </div>

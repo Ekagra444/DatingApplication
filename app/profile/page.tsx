@@ -6,8 +6,7 @@ import Navbar from './components/Navbar'
 import BestMatchCard from './components/Cards/BestMatchCard'
 // import BestMatches from './components/Cards/BestMatches'
 import Sidebar from './components/Sidebar'
-import { Chivo, Fredoka, Indie_Flower, Noto_Sans, Noto_Sans_Mono, Roboto, Space_Mono, Work_Sans } from 'next/font/google'
-import { Comic_Neue } from '@next/font/google'
+import { Chivo, Fredoka, Noto_Sans, Noto_Sans_Mono, Roboto, Space_Mono, Work_Sans } from 'next/font/google'
 
 const roboto = Roboto({
   subsets:["latin"],
@@ -21,11 +20,11 @@ const c_n = Fredoka({
 
 export default function page() {
   return (
-    <div className={`bg-black text-white ${c_n.className} `}>
+    <div className={`bg-black text-white ${c_n.className}`}>
       <Navbar />
     <div className='flex'>
-      <div className='w-[300px] relative'>
-      <Sidebar />
+      <div className='w-[650px]'>
+      <Sidebar /> 
       </div>
       <div>
         <div> 
@@ -37,7 +36,7 @@ export default function page() {
               PROFILE
             </div>
           </div> 
-    <div className='grid grid-flow-col gap-6'>
+    <div className='grid grid-flow-col gap-16'>
       <div className='col-span-2'>
         <Intro />
         <AboutCard />
