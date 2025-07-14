@@ -1,4 +1,3 @@
-// import { Rubik } from "@next/font/google";
 import Locationsvg from "../Locationsvg";
 import FBLogo from "./FBLogo";
 import InstaLogo from "./InstaLogo";

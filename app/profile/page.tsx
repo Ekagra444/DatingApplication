@@ -13,14 +13,14 @@ const roboto = Roboto({
   weight:["100", "300", "400", "500", "700"]
 })
 
-const c_n = Fredoka({
+const c_n = Space_Mono({
   subsets:["latin"],
   weight:["400"]
 })
 
 export default function page() {
   return (
-    <div className={`bg-black text-white ${c_n.className}`}>
+    <div className={`bg-black text-white ${c_n.className} tracking-tighter`}>
       <Navbar />
     <div className='flex'>
       <div className='w-[650px]'>
