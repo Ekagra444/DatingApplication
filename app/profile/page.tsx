@@ -68,7 +68,7 @@ export default function page() {
           </div> 
         </div>
         {/* Main content Area */}
-        <div>
+        <div className='overflow-y-auto pb-52' >
           {view == "profile"?<DatingProfileMain profile={sampleProfile}/>:<InterestsProfile />}
         </div>
         {/* Actions */}
