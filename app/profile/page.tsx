@@ -1,11 +1,11 @@
 "use client"
 
 import React, { useState } from 'react'
-import SideBar from './components/SideBar';
 import { Menu } from 'lucide-react';
 import DatingProfileMain from './components/DatingProfileMain';
 import InterestsProfile from './components/InterestsProfile';
 import ProfileActions from './components/ProfileActions';
+import Sidebar from './components/Sidebar';
 
 export default function page() {
   const [sidebarOpen, setsideBarOpen] = useState(true);
@@ -55,16 +55,16 @@ export default function page() {
   return (
     <div className='min-h-screen flex relative'>
       {sidebarOpen && <div className={`fixed inset-y-0 left-0 z-50 duration-300 ease-in-out`}>
-        <SideBar isOnline = {true} setisOpen={setsideBarOpen}/>
+        <Sidebar isOnline = {true} setisOpen={setsideBarOpen}/>
       </div>}
       <div className={`flex flex-col w-full z-10 ${sidebarOpen?"ml-[300px]":"ml-5"}`}>
-        <div className='sticky z-40 top-0 flex items-center backdrop-blur-md border-b py-5 px-6 border-[#262626]'>
+        <div className='sticky z-40 top-0 flex items-center backdrop-blur-md border-b py-5 px-6 border-crdBorder'>
           <div>
           {(!sidebarOpen) && <button onClick={changeSideBarState}><Menu className='hover:text-slate-200/90'/></button>}
           </div>
-            <div className='bg-[#1a1a1a]/90 font-medium mx-auto py-1 px-2 rounded-xl flex justify-center gap-4 shadow-lg'>
-          <button className={`${view == "profile" ? "backdrop-blur-md shadow-md bg-black":"bg-[#1a1a1a]/90"} duration-200 transition-all py-3 px-3 rounded-xl hover:scale-105`} onClick={toggleViewProfile}>Profile</button>
-          <button className={`${view == "interests" ? "backdrop-blur-md shadow-md bg-black":"bg-[#1a1a1a]/90"} duration-200 transition-all py-3 px-3 rounded-xl hover:scale-105`} onClick={toggleViewInterest}>Interests</button>
+            <div className='bg-card font-medium mx-auto py-1 px-2 rounded-xl flex justify-center gap-4 shadow-lg'>
+          <button className={`${view == "profile" ? "backdrop-blur-md shadow-md bg-black":"bg-card/90"} duration-200 transition-all py-3 px-3 rounded-xl hover:scale-105`} onClick={toggleViewProfile}>Profile</button>
+          <button className={`${view == "interests" ? "backdrop-blur-md shadow-md bg-black":"bg-card/90"} duration-200 transition-all py-3 px-3 rounded-xl hover:scale-105`} onClick={toggleViewInterest}>Interests</button>
           </div> 
         </div>
         {/* Main content Area */}

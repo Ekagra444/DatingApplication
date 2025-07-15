@@ -49,7 +49,7 @@ export default function Sidebar(props:sidebarProps) {
     props.setisOpen(val => !val);
 }
   return (
-    <div className="h-screen w-[300px] bg-gradient-to-b overflow-y-auto overflow-x-hidden from-black to-[#1a1a1a] border-r border-[#262626]/40">
+    <div className="h-screen w-[300px] bg-gradient-to-b overflow-y-auto overflow-x-hidden from-black to-card border-r border-crdBorder">
         <div className="pt-8 flex items-start justify-around">
           <div className="flex gap-4">
             <div className="rounded-2xl bg-red-600/10 ring-2 ring-red-500/30 flex items-center px-3.5">
