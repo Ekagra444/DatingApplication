@@ -72,7 +72,7 @@ export default function DatingProfileMain({
                 </div>}
             </div>
             <div className="space-y-6">
-                <div className="rounded-xl flex flex-col shadow-xl hover:scale-[1.01] transition-all duration-200 p-7 gap-2 bg-gradient-to-br from-[#1a1a1a] to-[#1a1a1a]/90">
+                <div className="rounded-xl flex flex-col shadow-xl hover:scale-[1.01] transition-all duration-200 p-7 gap-2 bg-gradient-to-br from-card to-card/90">
                     <div className="flex items-center gap-5">
                         <div className="font-bold text-4xl">
                         {`${profile.name}, ${profile.age}`}
@@ -93,7 +93,7 @@ export default function DatingProfileMain({
                     </div>
                 </div>
                 {/* Details component */}
-                <div className="bg-[#1a1a1a] rounded-xl border border-[#2f2f2f] shadow-md py-10 px-6">
+                <div className="bg-card rounded-xl border border-crdBorder shadow-md py-10 px-6">
                         <div className="font-semibold text-xl">Details</div>
                         <div className="flex flex-col mt-3 gap-3 opacity-90">
                                 <div className="flex items-center gap-3">
@@ -117,14 +117,14 @@ export default function DatingProfileMain({
                                     {profile.smokingPreference}
                                 </div>
                         </div>
-                        <div className="border border-[#2c2c2c] my-3"></div>
+                        <div className="border border-crdBorder my-3"></div>
                         <div className="flex gap-1">
                             <div className="font-semibold">Looking for :</div>
                             <div className="opacity-70">{profile.relationshipGoals}</div>
                         </div>
                 </div>
                 {/* About Me Card */}
-                <div className="bg-[#1a1a1a] rounded-xl border border-[#2f2f2f] shadow-md py-10 px-6">
+                <div className="bg-card rounded-xl border border-crdBorder shadow-md py-10 px-6">
                     <div>
                         <div className="text-xl font-semibold">About Me</div>
                         <div className="space-y-3 mt-3 opacity-90">
@@ -149,7 +149,7 @@ export default function DatingProfileMain({
                     <div className="w-16 h-1 bg-gradient-to-r from-red-400 to-pink-400 mx-auto mt-2 rounded-full"></div>
                 </div>
                 {profile.prompts.map((prompt, index)=>(
-                    <div key={index} className="bg-[#1a1a1a] rounded-xl border border-[#2f2f2f] shadow-md py-10 px-6">
+                    <div key={index} className="bg-card rounded-xl border border-crdBorder shadow-md py-10 px-6">
                         <div className="bg-gradient-to-r font-bold mb-2 text-lg from-red-400 to-pink-400 text-transparent bg-clip-text">{prompt.question}</div>
                         <div>{prompt.answer}</div>
                     </div>

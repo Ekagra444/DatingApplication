@@ -4,16 +4,17 @@
 
 /* 1. Base Theme (Dark Mode Default) */
 :root {
-  --color-background: #0a0a0a;
-  --color-foreground: #fafafa;
-  --color-card: #1a1a1a;
-  --color-card-foreground: #fafafa;
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: 26 26 26;
+  --clr-card-foreground: #fafafa;
+  --card-border:47 47 47;
 
   /* Tailwind-like variable names */
-  --background: var(--color-background);
+  /* --background: var(--color-background);
   --foreground: var(--color-foreground);
   --card: var(--color-card);
-  --card-foreground: var(--color-card-foreground);
+  --card-foreground: var(--color-card-foreground); */
 }
 
 /* 2. Light Theme (Respects system preference) */
@@ -31,16 +32,9 @@
   }
 }
 
-/* 3. Global Styling */
+/* 3. Global Styling  */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-/* 4. Extra utility */
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }

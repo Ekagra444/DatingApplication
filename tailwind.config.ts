@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        card:"rgb(var(--card)/<alpha-value>)",
+        crdBorder:"rgb(var(--card-border)/<alpha-value>)"
       },
     },
   },
