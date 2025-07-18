@@ -69,7 +69,7 @@ export default function Sidebar(props:sidebarProps) {
           </div>
         </div>
         <div className=" py-9 flex justify-center">
-          <div className="transition-all duration-200 bg-[#1a1a1a]/50 border border-[#262626]/40 hover:shadow-lg hover:bg-[#262626]/80 p-4 rounded-xl flex items-center gap-4">
+          <div className="transition-all duration-200 bg-card/50 border border-cardBorder/40 hover:shadow-lg hover:bg-card/80 p-4 rounded-xl flex items-center gap-4">
           <div className="bg-red-600/10 flex rounded-full text-red-400 font-semibold ring-2 ring-red-500/40 text-lg px-3 h-full items-center ">
           SJ
           </div>

@@ -63,8 +63,8 @@ export default function page() {
           {(!sidebarOpen) && <button onClick={changeSideBarState}><Menu className='hover:text-slate-200/90'/></button>}
           </div>
             <div className='bg-card font-medium mx-auto py-1 px-2 rounded-xl flex justify-center gap-4 shadow-lg'>
-          <button className={`${view == "profile" ? "backdrop-blur-md shadow-md bg-black":"bg-card/90"} duration-200 transition-all py-3 px-3 rounded-xl hover:scale-105`} onClick={toggleViewProfile}>Profile</button>
-          <button className={`${view == "interests" ? "backdrop-blur-md shadow-md bg-black":"bg-card/90"} duration-200 transition-all py-3 px-3 rounded-xl hover:scale-105`} onClick={toggleViewInterest}>Interests</button>
+          <button className={`${view == "profile" ?"dark:bg-black bg-pink-100/90":"bg-card/90"} duration-200 transition-all py-3 px-3 rounded-xl hover:scale-105`} onClick={toggleViewProfile}>Profile</button>
+          <button className={`${view == "interests" ? "dark:bg-black bg-pink-100/90":"bg-card/90"} duration-200 transition-all py-3 px-3 rounded-xl hover:scale-105`} onClick={toggleViewInterest}>Interests</button>
           </div> 
         </div>
         {/* Main content Area */}

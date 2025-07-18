@@ -12,7 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         card:"rgb(var(--card)/<alpha-value>)",
-        crdBorder:"rgb(var(--card-border)/<alpha-value>)"
+        crdBorder:"rgb(var(--card-border)/<alpha-value>)",
       },
     },
   },
