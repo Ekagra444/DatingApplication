@@ -51,8 +51,20 @@ model Profile {
   showAge          Boolean   @default(true)
   showDistance     Boolean   @default(true)
 
+  photos             UserPhoto[]
+
   createdAt        DateTime  @default(now())
   updatedAt        DateTime  @updatedAt
+}
+
+model UserPhoto{
+  id         String   @id @default(uuid())
+  profile    Profile  @relation(fields: [profileId], references: [id])
+  profileId  String
+  url        String   // The Cloudinary URL of the image
+  publicId   String   // For easy deletion in Cloudinary (optional)
+  isPrimary  Boolean  @default(false) // Flag for main profile photo
+  uploadedAt DateTime @default(now())
 }
 
 enum Gender {
